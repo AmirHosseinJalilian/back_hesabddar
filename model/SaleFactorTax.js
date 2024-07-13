@@ -6,12 +6,11 @@ const SaleFactorTax = sequelize.define(
   {
     saleFactorConfirmationID: {
       type: DataTypes.BIGINT,
-      primaryKey: true,
       field: "SaleFactorConfirmationID",
       // autoIncrement: false,
     },
     billType: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.TINYINT,
       field: "BillType",
     },
     postType: {
@@ -33,6 +32,12 @@ const SaleFactorTax = sequelize.define(
     loanAmount: {
       type: DataTypes.FLOAT,
       field: "LoanAmount",
+    },
+    id: {
+      type: DataTypes.BIGINT,
+      primaryKey: true,
+      field: "ID",
+      autoIncrement: true,
     },
   },
   {

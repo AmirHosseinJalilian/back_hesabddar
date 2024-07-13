@@ -45,7 +45,7 @@ SaleFactor.belongsTo(Grouping, {
 Grouping.hasOne(SaleFactor, {
   foreignKey: "id",
 });
-SaleFactor.hasMany(SaleFactorTax, {
+SaleFactor.hasOne(SaleFactorTax, {
   foreignKey: "saleFactorConfirmationID",
 }); 
 SaleFactor.hasOne(SaleFactorTaxStatus, {
