@@ -121,7 +121,7 @@ const SaleFactorTaxStatus = require("../model/SaleFactorTaxStatus");
 const Commodity = require("../model/Commodity");
 
 const getSaleFactors = async (req, res) => {
-  const { limit = 10,  page = 1, id ,sortBy = 'dateFactorSale', order = 'ASC' } = req.query;
+  const { limit = 100,  page = 1, id ,sortBy = 'dateFactorSale', order = 'ASC' } = req.query;
 
   const offset = (parseInt(page) - 1) * parseInt(limit);
 

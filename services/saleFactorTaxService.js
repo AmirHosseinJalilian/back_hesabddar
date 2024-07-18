@@ -2,7 +2,7 @@ const SaleFactorTax = require("../model/SaleFactorTax");
 
 const createSaleFactorTax = async (req, res) => {
   const { body } = req;
-
+delete body.creationDate;
   try {
     const saleFactorTax = await SaleFactorTax.create(body);
     res.status(201).json(saleFactorTax);
@@ -14,6 +14,7 @@ const createSaleFactorTax = async (req, res) => {
 module.exports = {
   createSaleFactorTax
 };
+
 // const { QueryTypes } = require('sequelize');
 
 // const createSaleFactorTax = async (req, res) => {

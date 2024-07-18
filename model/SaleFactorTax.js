@@ -4,6 +4,12 @@ const sequelize = require("../config/database");
 const SaleFactorTax = sequelize.define(
   "saleFactorTax",
   {
+    id: {
+      type: DataTypes.BIGINT,
+      primaryKey: true,
+      field: "ID",
+      autoIncrement: true,
+    },
     saleFactorConfirmationID: {
       type: DataTypes.BIGINT,
       field: "SaleFactorConfirmationID",
@@ -20,6 +26,7 @@ const SaleFactorTax = sequelize.define(
     creationDate: {
       type: DataTypes.DATE,
       field: "CreationDate",
+      defaultValue: DataTypes.NOW,
     },
     settlementMethod: {
       type: DataTypes.TINYINT,
@@ -33,12 +40,7 @@ const SaleFactorTax = sequelize.define(
       type: DataTypes.FLOAT,
       field: "LoanAmount",
     },
-    id: {
-      type: DataTypes.BIGINT,
-      primaryKey: true,
-      field: "ID",
-      autoIncrement: true,
-    },
+    
   },
   {
     tableName: "SaleFactorTax",
